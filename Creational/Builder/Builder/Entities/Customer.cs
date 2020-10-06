@@ -1,7 +1,4 @@
 ﻿using Builder.Enumerator;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Builder.Entities
 {
