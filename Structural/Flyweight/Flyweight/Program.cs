@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Flyweight.Entity;
+using Flyweight.Factory;
+using System;
 
 namespace Flyweight
 {
@@ -6,7 +8,13 @@ namespace Flyweight
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var factory = new PropertyFactory();
+
+            Property property = factory.GetProperty('I');
+            property.Display();
+
+            property = factory.GetProperty('M');
+            property.Display();
         }
     }
 }
