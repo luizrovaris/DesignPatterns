@@ -1,6 +1,5 @@
 ﻿using Flyweight.Entity;
 using Flyweight.Factory;
-using System;
 
 namespace Flyweight
 {
