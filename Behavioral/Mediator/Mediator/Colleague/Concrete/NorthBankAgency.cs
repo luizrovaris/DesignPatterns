@@ -7,6 +7,8 @@ namespace Mediator.Colleague.Concrete
         public NorthBankAgency(Mediator mediator)
             : base(mediator)
         {
+            this.Code = "N001";
+            this.Name = "North Agency";
         }
 
         public void ChangeCustomerAgency(BankAgency newAgency)

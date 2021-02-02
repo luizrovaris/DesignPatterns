@@ -1,5 +1,5 @@
 ﻿using Mediator.Colleague.Concrete;
-using System;
+using Mediator.Entity;
 
 namespace Mediator
 {
@@ -13,9 +13,20 @@ namespace Mediator
             var northBankAgency = new NorthBankAgency(mediator);
 
             mediator.SouthBankAgency = southBankAgency;
-            mediator.NorthBankAgency = northBankAgency;            
+            mediator.NorthBankAgency = northBankAgency;
 
-            Console.ReadKey();
+            var customer = new Customer()
+            {
+                BankAgency = southBankAgency,
+                IdentificationNumber = "1234",
+                Name = "Customer Test"
+            };
+
+            customer.Display();
+
+            customer.BankAgency = southBankAgency.ChangeCustomerAgency(northBankAgency);
+
+            customer.Display();
         }
     } 
 }
